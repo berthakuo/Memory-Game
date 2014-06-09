@@ -88,6 +88,7 @@ function defineBack(){
 // Displays all the front 
 //************************************************************
 function showUserFront(){
+	$(".wrapper").fadeIn(1000);
 	for (var i=1; i<=totalBoxes; i++){
 		var temp = ".box." + i;
 		$(temp).children(".front").show();
@@ -125,7 +126,8 @@ function flipBox(){
 	}
 	else{
 		$(".message").html("You Lose.");
-		$(".reset").html("Play Again")
+		$(".reset").html("Play Again");
+		$(".wrapper").fadeOut(1000);
 	}
 }
 
