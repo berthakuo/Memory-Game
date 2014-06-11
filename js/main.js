@@ -4,7 +4,7 @@
 var totalBoxes = 16;
 var randWhiteBoxes=[];
 var count;
-var numWhiteBoxes=3;
+var numWhiteBoxes=4;
 
 //************************************************************
 // On Click Handlers
@@ -75,7 +75,7 @@ function resetBoxes(){
 function defineBack(){
 	for (var i=1; i<=totalBoxes; i++){
 		var temp = ".box." + i;
-		if(i==randWhiteBoxes[0] || i==randWhiteBoxes[1] || i==randWhiteBoxes[2]){	//hard coded-should be a better way
+		if(i==randWhiteBoxes[0] || i==randWhiteBoxes[1] || i==randWhiteBoxes[2] || i==randWhiteBoxes[3]){	//hard coded-should be a better way
 			$(temp).children(".back").addClass("white");
 		}
 		else{
@@ -115,12 +115,12 @@ function showUserBack(){
 function flipBox(){
 	$(this).children(".back").show();
 	$(this).children(".front").hide();
-	if ($(this).children(".back").hasClass("white") && count!=2){		//hard-coded
+	if ($(this).children(".back").hasClass("white") && count!=3){		//hard-coded
 		count++;
-		var numLeft = 3 - count;
+		var numLeft = 4 - count;										//hard-coded
  		$(".message").html("Good job! There are " + numLeft + " more")
 	}
-	else if($(this).children(".back").hasClass("white") && count==2){	//hard-coded
+	else if($(this).children(".back").hasClass("white") && count==3){	//hard-coded
 		$(".message").html("You Win!");
 		$(".reset").html("Play Again");
 	}

@@ -45,26 +45,38 @@ Developer @GA in NYC
 /* BASE STYLES                   
 /*******************************************/
 
-body {
+body * {
      color: #000;
-     line-height: 1.4;
      font-family: 'Lato', sans-serif;
-     font-weight: 400;
-     min-height:100px; 
-     max-width:1300px;
      margin: auto;
+     font-size: 1.1em;
+     text-transform: uppercase;
+
 }
+
 
 
 /******************************************
 /* LAYOUT                   
 /*******************************************/
+body, html{
+     height:100%;
+}
 
+.title{
+     font-size: 1.4em;
+}
+.title span:first-child{
+     font-weight: 700;
+}
+
+.title span:last-child{
+     font-weight: 300;
+}
 
 .message, .button{
-     width:200px;
      height:50px;
-     border: 1px solid black;
+     /*border: 1px solid black;*/
      margin: 0 auto;
      text-align: center;
 }
@@ -78,7 +90,7 @@ body {
 
 .wrapper{
      width:400px;  
-     margin: 50px auto;
+     /*margin: 50px auto;*/
 }
 
 
@@ -93,6 +105,18 @@ body {
 .black{
      background: black;
 }
+
+#container{
+     height:100%;
+     margin:0 auto;
+     display: -webkit-flex;
+     -webkit-flex-direction: column;
+     -webkit-justify-content: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+}
+
 
 
 
